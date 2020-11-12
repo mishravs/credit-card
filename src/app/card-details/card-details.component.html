@@ -1,0 +1,40 @@
+<br>
+<hr>
+<div [hidden]="submitted" style="width: 400px;">
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Credit Card Number</label><span class="required">* </span>
+            <input minlength="16" maxlength="16" type="text" class="form-control" id="cardNumber" required
+                [(ngModel)]="card.cardNumber" name="cardNumber">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Card Holder Name</label><span class="required">* </span>
+            <input type="text" class="form-control" id="holderName" required [(ngModel)]="card.holderName"
+                name="holderName">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Expiration Date</label><span class="required">* </span>
+            <input type="date" [min]="today" class="form-control" id="expiry" [(ngModel)]="card.expiry" name="expiry"
+                required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">CVV </label>
+            <input type="text" class="form-control" id="cvv" [(ngModel)]="card.cvv" name="cvv">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="name">Amount </label><span class="required">* </span>
+            <input type="number" class="form-control" id="amount" [(ngModel)]="card.amount" min="1" name="amount" required>
+        </div>
+        <br>
+        <hr>
+        <button type="submit" class="btn btn-success">Pay</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+
+</div>

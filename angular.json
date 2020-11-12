@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "credit-card"
+    }
+  },
+  "defaultProject": "credit-card",
+  "cli": {
+    "analytics": "8c12e13a-1382-47a5-8294-8e05454d016b"
+  }
 }
